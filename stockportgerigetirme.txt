@@ -1,6 +1,29 @@
 STOCKPORT ALANLARINI GERİ GETİRME
 =================================
-Hazırlandı: 11 Kasım 2026
+Hazırlandı: 11 Kasım 2026 · Güncellendi: 12 Kasım 2026
+
+
+!!! ÖNCE BUNU OKU — YEREL main ARTIK STOCKPORT'LU !!!
+-----------------------------------------------------
+12 Kasım 2026'da 6 Stockport sayfasinin metinleri yenilendi (Updates2.pdf:
+giris, Article 4 notu, konut paragrafi, proje etiketleri ve alan basina tam
+FAQ seti). Bu is YEREL main uzerinde yapildi ve BILEREK PUSH EDILMEDI.
+
+Sonuclari:
+  * Yerel main, kaldirmanin revert'unu de iceriyor. Yani bu calisma
+    kopyasinda 6 sayfa YENIDEN ACIK. Lokal sitede gorunurler.
+  * GitHub Desktop'ta "Push origin" tiklanirsa 6 sayfa YENI METINLERIYLE
+    CANLIYA CIKAR. Hazir olmadan push etme.
+  * Guncel hali gormek icin: https://github.com/fstopcreative/NearMe-stockport
+    (kopya repo, yeni metinlerle push edildi)
+
+Yayina almaya karar verince yapilacak tek sey: origin'e push.
+Vazgecip tekrar kaldirmak istersen:  git revert <revert commit'i>
+veya kaldirma commit'ini (e6d6872) yeniden uygula.
+
+Ilgili commit'ler:
+  7f294ca  content: rewrite the six Stockport pages to the supplied wording
+  da2ea43  Revert "Take the Stockport areas off the site for now"
 
 Bu dosya, Stockport alanlarının siteden geçici olarak kaldırılmasıyla ilgili
 her şeyi tek yerde tutar. Geri getirmek isteyen doğrudan "3. GERİ GETİRME"
