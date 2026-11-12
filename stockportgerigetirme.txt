@@ -3,27 +3,53 @@ STOCKPORT ALANLARINI GERİ GETİRME
 Hazırlandı: 11 Kasım 2026 · Güncellendi: 12 Kasım 2026
 
 
-!!! ÖNCE BUNU OKU — YEREL main ARTIK STOCKPORT'LU !!!
------------------------------------------------------
-12 Kasım 2026'da 6 Stockport sayfasinin metinleri yenilendi (Updates2.pdf:
-giris, Article 4 notu, konut paragrafi, proje etiketleri ve alan basina tam
-FAQ seti). Bu is YEREL main uzerinde yapildi ve BILEREK PUSH EDILMEDI.
+!!! ÖNCE BUNU OKU — "main" İKİ FARKLI ŞEY DEMEK !!!
+---------------------------------------------------
+Durum (12 Kasım 2026). Karıştırmamak için ezberlenecek tek cümle:
+CANLIDA STOCKPORT YOK, SENİN BİLGİSAYARINDAKİ main'DE VAR.
 
-Sonuclari:
-  * Yerel main, kaldirmanin revert'unu de iceriyor. Yani bu calisma
-    kopyasinda 6 sayfa YENIDEN ACIK. Lokal sitede gorunurler.
-  * GitHub Desktop'ta "Push origin" tiklanirsa 6 sayfa YENI METINLERIYLE
-    CANLIYA CIKAR. Hazir olmadan push etme.
-  * Guncel hali gormek icin: https://github.com/fstopcreative/NearMe-stockport
-    (kopya repo, yeni metinlerle push edildi)
+                              Party Wall   Bunların     Arama listesi
+                              sayfası      Stockport'u  (areas.js)
+  Uzaktaki main = CANLI           12            0            19
+  (f29c8c4, fstopcreative/NearMe)
+  Yerel main                      19            7            26
+  (b61180e, bu bilgisayar)
 
-Yayina almaya karar verince yapilacak tek sey: origin'e push.
-Vazgecip tekrar kaldirmak istersen:  git revert <revert commit'i>
-veya kaldirma commit'ini (e6d6872) yeniden uygula.
+Neden böyle: 11 Kasım'da Stockport siteden kaldırıldı ve bu push edildi.
+12 Kasım'da gelen metin düzenlemelerinin (Updates2.pdf) inebilmesi için
+kaldırma YEREL olarak geri alındı, düzenlemeler uygulandı, ama BİLEREK
+PUSH EDİLMEDİ.
 
-Ilgili commit'ler:
-  7f294ca  content: rewrite the six Stockport pages to the supplied wording
-  da2ea43  Revert "Take the Stockport areas off the site for now"
+  >>> GitHub Desktop'ta "Push origin" tıklarsan 6 Stockport sayfası
+  >>> yeni metinleriyle CANLIYA ÇIKAR. Hazır olmadan push etme.
+
+Push etmeden yeni halini görmek için:
+  https://github.com/fstopcreative/NearMe-stockport   (kopya repo, güncel)
+  veya lokalde: npm run dev → http://localhost:5179/party-wall-surveyors/marple
+
+
+BEKLEYEN COMMIT YIĞINI (origin'in önünde)
+-----------------------------------------
+  f29c8c4  <-- CANLI ŞU AN BURADA
+  1486ec3  docs: kopya repo adresi
+  9705e07  content: Hale/Sale "villas" düzeltmesi
+           ^^^ buraya kadar Stockport HÂLÂ KALDIRILMIŞ durumda
+  ------------------------------------------------------------------
+  da2ea43  Revert "Stockport'u siteden kaldır"
+           ^^^ buradan sonrası Stockport'u geri getiriyor
+  7f294ca  content: 6 Stockport sayfası yeni metinlerle yazıldı
+  b61180e  docs: bu uyarı notu
+
+Üç seçenek:
+  1) Hiçbir şey push etme          — her şey bekler (şu anki durum)
+  2) Sadece Trafford düzeltmesi    — git push origin 9705e07:main
+                                     Hale/Sale "villas" düzeltmesi canlıya
+                                     çıkar, Stockport kaldırılmış kalır.
+  3) Hepsini yayınla               — normal push; Stockport geri gelir.
+
+Vazgeçip tekrar kaldırmak istersen: kaldırma commit'i e6d6872'yi yeniden
+uygula (git revert da2ea43) ve 4. bölümdeki uyarıları gözden geçir.
+
 
 Bu dosya, Stockport alanlarının siteden geçici olarak kaldırılmasıyla ilgili
 her şeyi tek yerde tutar. Geri getirmek isteyen doğrudan "3. GERİ GETİRME"
