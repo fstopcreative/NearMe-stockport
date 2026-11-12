@@ -29,6 +29,12 @@ Kaldırılan 7 alan:
   f1d65c3  Zamanlanmış veri yenilemesinin Stockport işiyle merge'ü
   9755478  "9"   (alanların eklenmesi)
 
+Kopya repo: https://github.com/fstopcreative/NearMe-stockport
+        Kaldirilmamis halin tam kopyasi (4d36922, 31 commit). 10 Kasim 2026
+        verisiyle DONMUSTUR; ana repodaki haftalik tur bu kopyayi guncellemez.
+        Geri getirmek icin yine de asagidaki revert yolu daha pratiktir, cunku
+        ana repoda veri taze kalmaya devam ediyor.
+
 Etiket: stockport-v1  ->  4d36922
         Kaldırmadan hemen önceki hal. Bir şey ters giderse buraya bakılabilir:
             git show stockport-v1:src/js/data/areas.js
